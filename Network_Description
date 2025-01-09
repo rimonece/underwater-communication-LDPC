@@ -1,0 +1,78 @@
+Network Scenario
+This code simulates a multi-hop underwater communication system, where a transmitter communicates with a receiver over an underwater acoustic channel. The scenario involves:
+
+Nodes:
+
+Multiple nodes are placed at varying distances and depths, simulating a real underwater environment.
+Channel:
+
+An underwater acoustic channel introduces noise and attenuation to the transmitted signals. Signal-to-Noise Ratio (SNR) is varied to analyze performance under different channel conditions.
+Modulation:
+
+Supports multiple modulation schemes: BPSK, QPSK, FSK, and 16-QAM.
+Modulation affects how data is encoded into waveforms for transmission.
+Error Correction:
+
+Low-Density Parity Check (LDPC) coding is used to encode messages, improving reliability by correcting errors introduced during transmission.
+Performance Metrics:
+
+The system evaluates:
+Bit Error Rate (BER): Fraction of incorrectly decoded bits.
+Frame Error Rate (FER): Fraction of frames with errors.
+Success Rate: Percentage of error-free transmissions.
+
+Use Case:
+
+This scenario is suitable for underwater sensor networks, environmental monitoring, or underwater IoT applications where reliability and efficiency are critical.
+
+
+Code Description
+The code is a simulation framework for evaluating underwater communication performance. It includes the following components:
+
+1. DigitalDemodulator Class
+Implements demodulation for various modulation schemes:
+BPSK: Binary phase shift keying.
+QPSK: Quadrature phase shift keying.
+FSK: Frequency shift keying.
+16-QAM: 16-level quadrature amplitude modulation.
+Includes features like:
+Signal amplification.
+Adaptive gain control.
+Equalization to mitigate channel distortions.
+2. UnderwaterChannel Class
+Models the underwater acoustic channel.
+Simulates noise and attenuation using a specified SNR.
+3. DigitalModulator Class
+Converts binary messages into modulated waveforms for transmission.
+Supports BPSK and other modulation types.
+4. LDPC Class
+Provides functionality for:
+Encoding messages using LDPC coding.
+Decoding received signals to recover the original message.
+5. Main Simulation Function: test_combined_ldpc
+Inputs:
+Number of nodes.
+Steps:
+Node Placement:
+Randomly generates positions (horizontal distance and depth) for nodes.
+Message Encoding:
+Generates random binary messages and encodes them using LDPC.
+Modulation and Transmission:
+Modulates messages and transmits them through the underwater channel.
+Demodulation and Decoding:
+Recovers the transmitted messages at the receiver using demodulation and LDPC decoding.
+Performance Evaluation:
+Calculates BER and FER for different modulation schemes and SNR values.
+Outputs:
+Plots comparing BER and FER across modulation schemes.
+Generated Plots
+The code produces the following plots:
+
+BER vs. SNR:
+
+Shows the bit error rate for all modulation schemes as SNR increases.
+Helps identify the most reliable modulation type under varying conditions.
+FER vs. SNR:
+
+Illustrates the frame error rate for all modulation schemes.
+Useful for understanding frame-level reliability.
