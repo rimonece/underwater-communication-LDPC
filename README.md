@@ -31,6 +31,9 @@ The simulation models a multi-hop underwater communication system with:
 ---
 
 ## **Generated Outputs**
+Run the main_uw_ldpc.py
+
+## **Generated Outputs**
 
 The simulation generates the following plots:
 1. **BER vs. SNR**:
