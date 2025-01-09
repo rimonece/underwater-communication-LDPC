@@ -42,7 +42,7 @@ Install the dependencies using:
 cd underwater-communication-simulation
 
 2. Run the simulation:
-python underwater_simulation.py
+python underwater_simulation_main_ldpc.py
 
 3. View the generated plots for BER and FER analysis.
 
