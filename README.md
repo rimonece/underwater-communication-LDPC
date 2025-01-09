@@ -50,59 +50,53 @@ The simulation generates the following plots:
   - `scipy`
   - `tqdm`
 
-Install the dependencies using:
-```bash
-pip install numpy matplotlib scipy tqdm
+### **Code Overview**
 
+#### **Key Components**
 
-Install the dependencies using:
+- **`DigitalDemodulator`**:
+  - Supports demodulation for **BPSK**, **QPSK**, **FSK**, and **16-QAM**.
+  - Includes signal amplification, gain adjustment, and equalization.
 
-1. Navigate to the project directory:
-cd underwater-communication-simulation
+- **`UnderwaterChannel`**:
+  - Simulates an underwater acoustic channel with noise and attenuation.
+  - Allows transmission at adjustable SNR levels.
 
-2. Run the simulation:
-python underwater_simulation_main_ldpc.py
+- **`DigitalModulator`**:
+  - Encodes binary data into modulated waveforms.
 
-3. View the generated plots for BER and FER analysis.
+- **`LDPC`**:
+  - Implements Low-Density Parity Check encoding and decoding.
 
+- **Main Simulation (`test_combined_ldpc`)**:
+  - Simulates transmission and reception for multiple SNR levels and modulation schemes.
+  - Outputs performance metrics (**BER**, **FER**) for analysis.
 
-**Code Overview**
+---
 
-**Key Components**
+### **Output Examples**
 
-DigitalDemodulator:
+1. **BER vs. SNR**
+2. **FER vs. SNR**
 
-Supports demodulation for BPSK, QPSK, FSK, and 16-QAM.
-Includes signal amplification, gain adjustment, and equalization.
-UnderwaterChannel:
+---
 
-Simulates an underwater acoustic channel with noise and attenuation.
-Allows transmission at adjustable SNR levels.
-DigitalModulator:
+### **Future Extensions**
 
-Encodes binary data into modulated waveforms.
-LDPC:
+1. Incorporate advanced channel models with multi-path effects.
+2. Add support for adaptive modulation and coding.
+3. Explore higher-order modulation schemes like **64-QAM** or **OFDM**.
 
-Implements Low-Density Parity Check encoding and decoding.
-Main Simulation (test_combined_ldpc):
+---
 
-Simulates transmission and reception for multiple SNR levels and modulation schemes.
-Outputs performance metrics (BER, FER) for analysis.
+### **Contributing**
 
-**Output Examples**
-1. BER vs. SNR
-2. FER vs. SNR
-
-Future Extensions
-Incorporate advanced channel models with multi-path effects.
-Add support for adaptive modulation and coding.
-Explore higher-order modulation schemes like 64-QAM or OFDM.
-Contributing
 Contributions are welcome! If you'd like to contribute:
+1. Fork the repository.
+2. Create a feature branch:
+   ```bash
+   git checkout -b feature-name
 
+### **Acknowledgements**
 
-License
-This project is licensed under the MIT License. See the LICENSE file for details.
-
-Acknowledgements:
-This simulation framework was developed to support research and educational purposes of contributing to error correction in underwater communication systems. Your feedback and contributions are highly appreciated!
+This simulation framework was developed to advance research and education for error correction using LPDPC coding in underwater communication systems. It aims to support the study of error correction techniques, modulation schemes, and reliable communication in challenging underwater environments.
