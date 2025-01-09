@@ -30,7 +30,7 @@ The simulation models a multi-hop underwater communication system with:
 
 ---
 
-## **Generated Outputs**
+## **Main File**
 Run the main_uw_ldpc.py
 
 ## **Generated Outputs**
