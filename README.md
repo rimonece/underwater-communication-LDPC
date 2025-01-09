@@ -1,40 +1,59 @@
-**Underwater Communication System Simulation**
-This repository provides a simulation framework for evaluating the performance of underwater acoustic communication systems. It includes support for multiple modulation schemes, LDPC error correction coding, and multi-hop transmission scenarios over an underwater acoustic channel.
+# **Underwater Communication System Simulation**
 
-**Network Scenario**
-This simulation models an underwater communication system with:
+This repository contains a simulation framework for evaluating the performance of underwater acoustic communication systems. It supports various modulation schemes, error correction techniques, and performance metrics to analyze the efficiency and reliability of underwater communications.
 
-Multiple Nodes: Nodes placed at varying distances and depths.
-Underwater Acoustic Channel: Introduces noise and attenuation, with adjustable Signal-to-Noise Ratio (SNR).
-Modulation Schemes: Supports BPSK, QPSK, FSK, and 16-QAM.
-Error Correction: Uses Low-Density Parity Check (LDPC) coding for reliable data transmission.
-Performance Metrics:
-Bit Error Rate (BER): Fraction of bits decoded incorrectly.
-Frame Error Rate (FER): Fraction of frames with errors.
-Success Rate: Percentage of error-free transmissions.
+---
 
-**Features**
-Simulates multi-hop underwater communication with random node placements.
-Evaluates BER and FER across different modulation schemes and SNR values.
-Visualizes performance metrics through plots for easy analysis.
-Includes a flexible and modular design for future extensions.
+## **Network Scenario**
 
-**Generated Outputs**
+The simulation models a multi-hop underwater communication system with:
+1. **Nodes**:
+   - Randomly placed nodes with varying distances and depths.
+2. **Underwater Acoustic Channel**:
+   - Simulates noise and attenuation, with adjustable Signal-to-Noise Ratio (SNR).
+3. **Modulation Schemes**:
+   - **BPSK**, **QPSK**, **FSK**, and **16-QAM**.
+4. **Error Correction**:
+   - Low-Density Parity Check (LDPC) coding to improve reliability.
+5. **Performance Metrics**:
+   - **Bit Error Rate (BER):** Fraction of bits decoded incorrectly.
+   - **Frame Error Rate (FER):** Fraction of frames with errors.
+   - **Success Rate:** Percentage of error-free transmissions.
+
+---
+
+## **Features**
+
+- Multi-hop underwater acoustic communication simulation.
+- Evaluation of BER and FER across multiple modulation schemes and SNR values.
+- Visualizations for performance analysis.
+
+---
+
+## **Generated Outputs**
+
 The simulation generates the following plots:
+1. **BER vs. SNR**:
+   - Compares bit error rates for all modulation schemes.
+2. **FER vs. SNR**:
+   - Illustrates frame error rates across modulation schemes.
 
-BER vs. SNR:
-Compares bit error rate across modulation schemes for different SNR levels.
-FER vs. SNR:
-Illustrates frame error rate trends for all modulation schemes.
+---
 
-**Getting Started**
-Prerequisites
-Python 3.x
-Required Python libraries:
-numpy
-matplotlib
-scipy
-tqdm
+## **Getting Started**
+
+### **Prerequisites**
+- Python 3.x
+- Required Python libraries:
+  - `numpy`
+  - `matplotlib`
+  - `scipy`
+  - `tqdm`
+
+Install the dependencies using:
+```bash
+pip install numpy matplotlib scipy tqdm
+
 
 Install the dependencies using:
 
