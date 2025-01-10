@@ -30,19 +30,6 @@ The simulation models a multi-hop underwater communication system with:
 
 ---
 
-## **Main File**
-Run the main_uw_ldpc.py
-
-## **Generated Outputs**
-
-The simulation generates the following plots:
-1. **BER vs. SNR**:
-   - Compares bit error rates for all modulation schemes.
-2. **FER vs. SNR**:
-   - Illustrates frame error rates across modulation schemes.
-
----
-
 ## **Getting Started**
 
 ### **Prerequisites**
@@ -52,6 +39,19 @@ The simulation generates the following plots:
   - `matplotlib`
   - `scipy`
   - `tqdm`
+
+
+
+## Usage
+
+1. Clone or download the repository.
+2. Run the `main_uw_rs.py` Python script:
+
+```bash
+python <main_uw_ldpc>.py
+```
+
+The script will simulate the communication system and display the performance metrics in graphical form.
 
 ### **Code Overview**
 
@@ -71,11 +71,23 @@ The simulation generates the following plots:
 - **`LDPC`**:
   - Implements Low-Density Parity Check encoding and decoding.
 
-- **Main Simulation (`test_combined_ldpc`)**:
+- **Main Simulation (`main_uw_ldpc.py`)**:
   - Simulates transmission and reception for multiple SNR levels and modulation schemes.
   - Outputs performance metrics (**BER**, **FER**) for analysis.
 
 ---
+
+## **Main File**
+main_uw_ldpc.py
+
+## **Generated Outputs**
+
+The simulation generates the following plots:
+1. **BER vs. SNR**:
+   - Compares bit error rates for all modulation schemes.
+2. **FER vs. SNR**:
+   - Illustrates frame error rates across modulation schemes.
+
 
 ### **Output Examples**
 
@@ -83,6 +95,7 @@ The simulation generates the following plots:
 2. **FER vs. SNR**
 
 ---
+(Plots will be displayed when the script is executed.)
 
 ### **Future Extensions**
 
@@ -100,6 +113,18 @@ Contributions are welcome! If you'd like to contribute:
    ```bash
    git checkout -b feature-name
 
-### **Acknowledgements**
+### **Author**
 
-This simulation framework was developed to advance research and education for error correction using LPDPC coding in underwater communication systems. It aims to support the study of error correction techniques, modulation schemes, and reliable communication in challenging underwater environments.
+This simulation framework was developed to advance research and education for error correction using LPDPC coding in underwater communication systems. It aims to support the study of error correction techniques, modulation schemes, and reliable communication in challenging underwater environments. 
+
+
+## License
+
+This project is licensed under the MIT License.
+
+
+## Acknowledgment
+
+If you use this code, please acknowledge:
+Dr. Md Munjure Mowla   
+Email: rimonece@gmail.com
